@@ -11,7 +11,19 @@ export default createStore({
             {id: 4, author: "Fyodor Dostoevsky", book: "Crime and Punishment", goodreads: "4.2/5", price: 18}
         ]
     },
-    getters: {},
+    getters: {
+        productListSale: state => {
+            return state.productList.map(p => {
+                return {
+                    id: p.id,
+                    author: p.author,
+                    book: p.book,
+                    goodreads: p.goodreads,
+                    price: p.price * 0.5
+                }
+            })
+        }
+    },
     mutations: {},
     actions: {}
 })

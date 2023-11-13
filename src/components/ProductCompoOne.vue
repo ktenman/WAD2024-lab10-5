@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     productList() {
-      return this.$store.state.productList
+      return this.$store.getters.productListSale
     }
   }
 }
