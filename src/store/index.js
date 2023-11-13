@@ -24,6 +24,19 @@ export default createStore({
             })
         }
     },
-    mutations: {},
-    actions: {}
+    mutations: {
+        IncreasePrice2: state => {
+            state.productList.forEach(product => {
+                product.price += 1;
+            })
+        },
+        Decrease: state => {
+            state.productList.forEach(product => {
+                product.price -= 1;
+            })
+        },
+    },
+    actions: {
+
+    }
 })
